@@ -1,0 +1,30 @@
+ARG NODE_VERSION=16.13
+ARG BALENA_ARCH=%%BALENA_ARCH%%
+
+# base
+FROM balenalib/${BALENA_ARCH}-alpine-node:$NODE_VERSION as base
+WORKDIR /opt
+
+COPY package*.json ./
+
+# build
+FROM base as build
+
+COPY tsconfig*.json ./
+COPY src ./src
+COPY typings ./typings
+
+RUN npm install && npm cache clean --force
+# Build production bundle
+RUN npm run build
+
+# -- Run --
+FROM base as run
+
+RUN apk add dbus-glib-dev
+
+RUN JOBS=MAX npm ci --only=production
+
+COPY --from=build /opt/build/ ./build/
+
+CMD ["npm", "start"]
