@@ -10,7 +10,7 @@ services:
     environment:
       DBUS_SYSTEM_BUS_ADDRESS: 'unix:path=/host/run/dbus/system_bus_socket'
       MDNS_TLD: 'balena.local'
-  # the hello container is just for testing purposes!
-  hello:
-    image: nginxdemos/nginx-hello:plain-text
-    network_mode: host
+  # the hello container is just for testing purposes! uncomment to test this yourself
+  # hello:
+  #   image: nginxdemos/nginx-hello:plain-text
+  #   network_mode: host
