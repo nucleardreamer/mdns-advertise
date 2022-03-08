@@ -9,7 +9,7 @@ Here is an example of using this block in your `docker-compose.yml`.
 version: '2.1'
 services:
   mdns-advertise:
-    image: balenablocks/mdns-advertise
+    image: ghcr.io/nucleardreamer/mdns-advertise
     restart: "always"
     privileged: true
     network_mode: host
