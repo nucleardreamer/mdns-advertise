@@ -2,7 +2,7 @@ name: mdns-advertise
 description: >-
   Advertise a device with mDNS on your local network, and get a `.local` domain name.
 version: 0.0.1
-type: sw.application
+type: sw.block
 joinable: false
 assets:
   repository:
