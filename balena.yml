@@ -1,17 +1,18 @@
 name: mdns-advertise
 description: >-
-  Advertise a device with mDNS on your local network
+  Advertise a device with mDNS on your local network, and get a `.local` domain name.
 version: 0.0.1
 type: sw.application
+joinable: false
 assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/balenablocks/mdns-advertise'
+      url: 'https://github.com/nucleardreamer/mdns-advertise'
   logo:
     type: blob.asset
     data:
-      url: 'https://raw.githubusercontent.com/balenablocks/mdns-advertise/master/logo.png'
+      url: 'https://raw.githubusercontent.com/nucleardreamer/mdns-advertise/master/logo.png'
 data:
   defaultDeviceType: genericx86-64-ext
   supportedDeviceTypes:
