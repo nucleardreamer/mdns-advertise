@@ -10,7 +10,7 @@ version: '2.1'
 services:
 
   mdns-advertise:
-    image: ghcr.io/nucleardreamer/mdns-advertise
+    image: bhcr.io/gh_nucleardreamer/mdns-advertise
     restart: "always"
     privileged: true
     network_mode: host
